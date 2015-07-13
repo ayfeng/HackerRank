@@ -7,3 +7,6 @@ all: $(OUTPUTS)
 
 %: %.cpp
 	$(CC) $(CFLAGS) $< -o $@.out
+
+clean: 
+	rm *.out
