@@ -1,7 +1,9 @@
 CC=g++
 CFLAGS=-Wall -pedantic -std=c++11 -g
+SOURCES=$(wildcard *.cpp)
+OUTPUTS=$(SOURCES:.cpp=)
 
-all: basic_data_types pointer
+all: $(OUTPUTS)
 
 %: %.cpp
 	$(CC) $(CFLAGS) $< -o $@.out
